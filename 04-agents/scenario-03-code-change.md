@@ -11,6 +11,10 @@ on a branch — not main — before starting. Always.
 git checkout -b agent-experiment
 ```
 
+If you don't have a project with suitable code, use `sample-project/` from this repo.
+The `app.py` file has several endpoints that accept user input with no validation —
+a good target for this exercise.
+
 ---
 
 ## The task: add input validation

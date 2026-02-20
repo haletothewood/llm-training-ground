@@ -7,7 +7,8 @@ at or what the root cause is before you start.
 ## Setup
 Use Claude Code, Cursor, or any agent-capable tool in a project where you have a bug,
 a failing test, or something that just "doesn't work" and you haven't diagnosed it yet.
-If you don't have a real bug handy, use the seeded one in Part B.
+If you don't have a real bug handy, use `sample-project/` from this repo — it has a
+real bug in `tasks.py` waiting to be found. Jump to Part B for the prompt.
 
 ---
 
@@ -30,32 +31,34 @@ can validate it before the agent makes changes.
 
 ---
 
-## Part B — Seeded investigation scenario
+## Part B — Seeded investigation (sample-project/)
 
-If you don't have a real bug, create one. Add this file to a project:
-
-**`utils/sanitize.py`**
-```python
-import re
-
-def sanitize_username(username):
-    # Remove anything that isn't alphanumeric or underscore
-    cleaned = re.sub(r'[^\w]', '', username)
-    # Ensure it starts with a letter
-    if cleaned[0].isdigit():
-        cleaned = 'user_' + cleaned
-    return cleaned
-```
-
-Then ask:
+Navigate to `sample-project/` in this repo, then ask:
 
 ```
-There's a bug in utils/sanitize.py. The function crashes in some cases but not others.
-Investigate: read the file, reason about what inputs would cause a failure, and explain
-the bug without running the code.
+There is a bug in this project. The symptom: when you filter tasks by priority using
+GET /tasks?priority=high, you get back more tasks than expected — tasks of other
+priorities appear in the results.
+
+Investigate. Start by identifying which files handle the filtering logic, then read
+the relevant code and explain what you think is causing this. Don't fix it yet —
+just diagnose and show me the exact line responsible.
 ```
 
-(Hint: what happens if `username` is an empty string?)
+Once the agent has diagnosed it, continue with:
+
+```
+Now propose a one-line fix. Don't apply it yet.
+```
+
+Then, if the proposal looks right:
+
+```
+Apply the fix.
+```
+
+This three-step pattern — diagnose, propose, apply — is the safest approach for any
+non-trivial bug fix. Run the tests in `tests/test_tasks.py` after to confirm.
 
 ---
 

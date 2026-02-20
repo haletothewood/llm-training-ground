@@ -29,7 +29,8 @@ Either way: not useful.
 
 ## Part B — With file access (Claude Code or equivalent)
 
-In a tool-enabled environment, navigate to a project directory and ask:
+In a tool-enabled environment, navigate to the `sample-project/` directory in this repo
+(or any project of your own) and ask:
 
 ```
 What Python packages are listed as dependencies in this project?

@@ -4,8 +4,9 @@
 Give an agent a bounded, multi-step task and observe how it plans and executes.
 
 ## Setup
-Use Claude Code or any agent-capable setup. Navigate to a real project directory —
-even a small one with a few files works.
+Use Claude Code or any agent-capable setup. Navigate to a real project directory.
+If you don't have one handy, use `sample-project/` from this repo — it's a small
+Flask task manager with a clear structure, a few components, and a README.
 
 ---
 
