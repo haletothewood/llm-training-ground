@@ -1,5 +1,13 @@
 # Module 01 — Clear Prompting
 
+## By the end of this module you'll be able to
+
+- Look at any prompt you wrote and identify: what context is missing, what the expected output format is, and whether it's asking for one thing or many
+- Write a bug-fix prompt that gets a usable result in one shot without back-and-forth
+- Use format instructions to get output you can act on directly (JSON, table, list, code)
+
+---
+
 ## The core problem
 
 Most people get mediocre results from LLMs not because the model is bad, but because the prompt is vague. The model can only work with what you give it.

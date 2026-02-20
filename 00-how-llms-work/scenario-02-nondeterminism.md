@@ -48,6 +48,37 @@ Run this three to five times and compare outputs to Part A.
 
 ---
 
+## Part C — Record it yourself
+
+Run the Part A prompt five times. After each run, write down the **core recommendation**
+in one line (e.g. "use try/catch" or "use .catch()"). Don't paraphrase — just the key
+advice.
+
+```
+Run 1:
+Run 2:
+Run 3:
+Run 4:
+Run 5:
+```
+
+Then do the same for the Part B (step-by-step) prompt.
+
+```
+Run 1:
+Run 2:
+Run 3:
+Run 4:
+Run 5:
+```
+
+Count how many unique recommendations you got from each. The ratio — unique answers ÷
+total runs — is a rough measure of variance. Lower is more consistent.
+
+This exercise is worth doing once with a real prompt from your own work.
+
+---
+
 ## What to take from this
 
 - Output is not deterministic. A prompt that "worked" is a sample, not a guarantee.

@@ -3,6 +3,12 @@
 > **Start here.** This module has no exercises — read it once before doing anything else.
 > The concepts here explain *why* the advice in Modules 01–05 works, and when it fails.
 
+## By the end of this module you'll be able to
+
+- Explain in one sentence why hallucination is a structural property, not a fixable bug
+- Describe what happens to earlier context in a long conversation
+- Explain why two runs of the same prompt produce different output
+
 ---
 
 ## What is the model actually doing?

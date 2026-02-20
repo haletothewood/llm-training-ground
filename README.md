@@ -37,6 +37,10 @@ use as a target codebase for Modules 03–05 if you don't have your own project 
 The scenarios are designed to be attempted live in a chat session with an LLM. Open the
 scenario, paste the prompt into your model of choice, and iterate.
 
+An **`observations.md`** file at the root gives you a structured place to record what
+you notice as you work through each scenario — the "note the response" prompts in the
+scenarios are pointing here.
+
 ## Principles
 
 - **Do, don't just read.** The point is to run the prompts and see what happens.

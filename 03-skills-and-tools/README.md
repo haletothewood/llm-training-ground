@@ -1,5 +1,13 @@
 # Module 03 — Skills & Tools
 
+## By the end of this module you'll be able to
+
+- Frame a task as "what should the model do" rather than "what answer do I want"
+- Direct an agent to read real files and produce output grounded in their actual content
+- Create a custom skill (slash command) for a task you repeat often, and invoke it reliably
+
+---
+
 ## From answering to acting
 
 Modules 01 and 02 were about getting better *text* out of an LLM. This module is about

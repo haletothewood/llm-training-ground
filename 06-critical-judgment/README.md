@@ -1,5 +1,14 @@
 # Module 06 — Critical Judgment
 
+## By the end of this module you'll be able to
+
+- Spot context degradation in a live conversation and know when to start fresh
+- Apply the reversibility heuristic to decide how carefully to review any given AI output
+- Use the "prove it" and "show your sources" prompts to expose model confabulation
+- Categorise a task as high-trust or low-trust before delegating it to AI
+
+---
+
 ## Why this module exists
 
 The previous modules covered how to use AI effectively. This one covers something harder:

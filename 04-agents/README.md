@@ -1,5 +1,14 @@
 # Module 04 — Agents
 
+## By the end of this module you'll be able to
+
+- Set a goal for an agent (not a script) and let it plan the steps autonomously
+- Use the plan-before-change pattern to review and correct an agent before it touches files
+- Recognise and prevent scope creep before the agent makes unauthorised changes
+- Apply the diagnose-then-fix pattern to investigate a bug safely
+
+---
+
 ## What is an agent?
 
 An agent is an LLM that operates in a loop: it receives a goal, takes an action (often

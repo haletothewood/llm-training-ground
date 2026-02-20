@@ -1,5 +1,14 @@
 # Module 02 — Pro Prompts
 
+## By the end of this module you'll be able to
+
+- Choose the right technique (few-shot, CoT, role, self-critique) for a given task without having to think hard about it
+- Make a model's reasoning visible and checkable using chain-of-thought
+- Use self-critique to get a materially better output than a single-pass prompt produces
+- Show 2–3 examples to make a model match your team's specific style or format
+
+---
+
 ## What makes a prompt "pro"
 
 Module 01 was about clarity. This module is about techniques that unlock qualitatively different behaviour from the model: better reasoning, more consistent output, and responses shaped to a specific persona or style.

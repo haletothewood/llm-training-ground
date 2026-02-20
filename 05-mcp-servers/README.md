@@ -1,5 +1,13 @@
 # Module 05 — MCP Servers
 
+## By the end of this module you'll be able to
+
+- Connect a pre-built MCP server to Claude Code or Cursor and use it in a real task
+- Explain what the MCP protocol is sending between client and server
+- Build a minimal MCP server that exposes a custom tool and connects to your LLM client
+
+---
+
 ## What is MCP?
 
 MCP (Model Context Protocol) is an open standard that lets you connect an LLM to
