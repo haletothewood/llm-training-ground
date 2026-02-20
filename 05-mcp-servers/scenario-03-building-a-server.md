@@ -30,6 +30,34 @@ Small scope, real utility — and a good template for anything that reads/writes
 mkdir my-notes-mcp && cd my-notes-mcp
 npm init -y
 npm install @modelcontextprotocol/sdk
+npm install --save-dev typescript @types/node
+```
+
+**Important:** open `package.json` and add `"type": "module"` — this tells Node to treat
+`.js` output files as ES modules, which the MCP SDK requires:
+
+```json
+{
+  "name": "my-notes-mcp",
+  "version": "1.0.0",
+  "type": "module",
+  ...
+}
+```
+
+Create `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist",
+    "strict": true
+  },
+  "include": ["*.ts"]
+}
 ```
 
 Create `server.ts`:
@@ -92,11 +120,17 @@ await server.connect(transport);
 ```
 
 Compile and test:
+
 ```bash
-npx tsc server.ts --module nodenext --target es2022
-node server.js
+npx tsc
+node dist/server.js
 # Should hang — it's waiting for JSON-RPC input on stdin, which is correct
+# Press Ctrl+C to stop it
 ```
+
+> **Troubleshooting:** if you see `SyntaxError: Cannot use import statement`, check that
+> `"type": "module"` is present in `package.json`. If you see `top-level await is not
+> allowed`, check that `"target": "ES2022"` is in `tsconfig.json`.
 
 ---
 
@@ -109,7 +143,7 @@ Add to `~/.claude/claude.json`:
   "mcpServers": {
     "notes": {
       "command": "node",
-      "args": ["/absolute/path/to/my-notes-mcp/server.js"]
+      "args": ["/absolute/path/to/my-notes-mcp/dist/server.js"]
     }
   }
 }
@@ -124,7 +158,7 @@ Add to `~/.cursor/mcp.json`:
   "mcpServers": {
     "notes": {
       "command": "node",
-      "args": ["/absolute/path/to/my-notes-mcp/server.js"]
+      "args": ["/absolute/path/to/my-notes-mcp/dist/server.js"]
     }
   }
 }
