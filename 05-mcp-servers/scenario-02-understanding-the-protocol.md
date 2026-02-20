@@ -6,7 +6,7 @@ own servers effectively.
 
 ## What's actually happening
 
-When Claude Code starts an MCP server, it:
+When an MCP client (Claude Code, Cursor, etc.) starts an MCP server, it:
 
 1. Spawns the server process (or connects to an HTTP endpoint)
 2. Sends an `initialize` request
@@ -14,7 +14,7 @@ When Claude Code starts an MCP server, it:
 4. Registers these so the model can use them
 
 When you run a prompt, the model sees the tool definitions and decides whether to call
-one. If it does, Claude Code:
+one. If it does, the client:
 1. Sends a `tools/call` request to the MCP server
 2. Waits for the result
 3. Feeds the result back to the model as context
@@ -51,7 +51,7 @@ git clone https://github.com/modelcontextprotocol/servers
 cd servers/src/everything
 ```
 
-Ask Claude Code to explain it:
+Ask your agent to explain it:
 ```
 Read the source of this MCP reference server and explain:
 1. How it registers its tools

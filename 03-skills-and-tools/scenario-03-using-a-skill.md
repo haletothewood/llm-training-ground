@@ -1,5 +1,9 @@
 # Scenario 03 — Using a Skill (Claude Code)
 
+> **Claude Code-specific.** This scenario uses Claude Code's `/command` skill system.
+> See the [Module 03 README](./README.md#what-are-skills) for the equivalent in Cursor
+> (Rules) and GitHub Copilot (Custom Instructions).
+
 ## Goal
 Use a named skill (slash command) to invoke a well-defined, repeatable task.
 
@@ -94,3 +98,16 @@ Then invoke it with:
 
 Identify one task you do repeatedly in a chat session. Write it as a skill file and test it
 on a real case. Refine the template based on what the first run gets wrong.
+
+---
+
+## If you're using Cursor or Copilot
+
+**Cursor — Rules:** Create `.cursor/rules/summarise-pr.mdc` in your project with the same
+prompt template content. Rules can be set to trigger automatically (always-on) or manually.
+See the [Cursor Rules docs](https://docs.cursor.com/context/rules) for the full format.
+
+**GitHub Copilot — Custom Instructions:** Add the prompt template to
+`.github/copilot-instructions.md`. Unlike Claude Code skills, this applies to every
+Copilot chat session in the workspace automatically — there's no explicit invocation step.
+The trade-off: always-on context vs. on-demand invocation.

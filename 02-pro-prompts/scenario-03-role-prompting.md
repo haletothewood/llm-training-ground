@@ -13,6 +13,7 @@ but it meaningfully shifts the output.
 
 ## Part A — No role
 
+Copy the prompt (use Ctrl+Shift+V to paste so the model doesn't use the file as context).
 ```
 Review this Python function and tell me if there are any problems with it:
 

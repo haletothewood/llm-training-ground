@@ -30,14 +30,14 @@ deployment process from manual SSH to a CI/CD pipeline. The audience is a non-te
 engineering manager who cares about reliability and developer time.
 ```
 
-Copy the output.
+Copy the output (use Ctrl+Shift+V to paste so the model doesn't use the file as context).
 
 ### Step 2: Critique (paste the output in)
 
 ```
 Here is a paragraph I'm going to send to an engineering manager:
 
-[PASTE OUTPUT HERE]
+[PASTE OUTPUT HERE - use Ctrl+Shift+V to paste]
 
 Act as a critical editor. What are the weaknesses of this paragraph? Is it too jargon-heavy?
 Does it actually address what the manager cares about? Is the value proposition clear?
@@ -77,4 +77,4 @@ Try both approaches and compare.
 ## Challenge
 
 Take a piece of writing you've already written (an email, a doc, a PR description). Paste
-it in and ask the model to critique it, then revise it. How much did it improve?
+it in (use Ctrl+Shift+V to paste so the model doesn't use the file as context) and ask the model to critique it, then revise it. How much did it improve?

@@ -24,6 +24,13 @@ Chaining five questions into one message often produces a muddled answer. Ask on
 - [Scenario 02 — Context Setting](./scenario-02-context-setting.md)
 - [Scenario 03 — Format Control](./scenario-03-format-control.md)
 
+## A note on trust
+
+Better prompts make errors easier to catch — a precise prompt produces a precise output,
+and a wrong precise output is more obviously wrong than a wrong vague one. But precision
+doesn't prevent errors; it just makes them more visible. Pair this module with Module 06's
+verification habits, especially for any output you plan to act on directly.
+
 ## Before you move on
 
 You're ready for module 02 when you can look at a prompt you wrote and identify: what context is missing, what the expected output format is, and whether it's asking for one thing or many.

@@ -43,6 +43,15 @@ Better to course-correct early than to undo 20 automated changes.
 - [Scenario 02 — Multi-Step Investigation](./scenario-02-investigation.md)
 - [Scenario 03 — Agentic Code Change](./scenario-03-code-change.md)
 
+## A note on trust
+
+Agents can fail silently. Unlike a chat response that's obviously wrong, an agent can
+complete a multi-step task, report success, and have made subtly incorrect changes that
+only surface later. The more autonomous the agent, the more important it is to verify
+its output — not just review its plan. Module 06's verification patterns matter most
+in the agentic context. See also the "Detecting silent failures" section in
+[hints.md](./hints.md).
+
 ## Before you move on
 
 You're ready for module 05 when you understand the difference between "prompt the model"

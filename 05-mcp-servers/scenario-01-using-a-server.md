@@ -17,13 +17,11 @@ Full list: https://github.com/modelcontextprotocol/servers
 
 ---
 
-## Setting up the filesystem server (Claude Code)
+## Setting up the filesystem server
 
 This is the lowest-friction starting point — no API keys needed.
 
-### 1. Add the server to Claude Code config
-
-Edit (or create) `~/.claude/claude.json` and add:
+The config format is the same across clients; only the file path differs.
 
 ```json
 {
@@ -42,7 +40,19 @@ Edit (or create) `~/.claude/claude.json` and add:
 
 Replace the path with a real directory you want the model to access.
 
-### 2. Restart Claude Code
+### Claude Code
+
+Edit (or create) `~/.claude/claude.json`, add the config above, then restart Claude Code.
+
+### Cursor
+
+Edit (or create) `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` in your project
+root (project-scoped), add the config above, then restart Cursor.
+
+### VS Code + Copilot
+
+GitHub Copilot in VS Code does not natively support MCP servers. Use an MCP-capable
+client (Claude Code or Cursor) for this module.
 
 ### 3. Test it
 

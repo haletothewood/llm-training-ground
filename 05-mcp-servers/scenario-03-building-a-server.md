@@ -1,5 +1,9 @@
 # Scenario 03 — Building a Minimal MCP Server
 
+> **Optional — advanced.** This scenario is for developers who want to understand MCP at
+> the protocol level or plan to build custom integrations. Scenarios 01 and 02 are
+> sufficient for using MCP servers productively.
+
 ## Goal
 Build the simplest possible MCP server that exposes one useful tool, connect it to
 Claude Code, and verify it works end-to-end.
@@ -111,11 +115,26 @@ Add to `~/.claude/claude.json`:
 }
 ```
 
+## Connect it to Cursor
+
+Add to `~/.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "notes": {
+      "command": "node",
+      "args": ["/absolute/path/to/my-notes-mcp/server.js"]
+    }
+  }
+}
+```
+
 ---
 
 ## Test it
 
-In Claude Code:
+In Claude Code or Cursor:
 ```
 Remember to review the deployment checklist before Friday.
 ```

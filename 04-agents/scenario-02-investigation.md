@@ -5,9 +5,9 @@ Use an agent to investigate an unknown problem — where you don't know what fil
 at or what the root cause is before you start.
 
 ## Setup
-Use Claude Code in a project where you have a bug, a failing test, or something that
-just "doesn't work" and you haven't diagnosed it yet. If you don't have a real bug handy,
-use the seeded one in Part B.
+Use Claude Code, Cursor, or any agent-capable tool in a project where you have a bug,
+a failing test, or something that just "doesn't work" and you haven't diagnosed it yet.
+If you don't have a real bug handy, use the seeded one in Part B.
 
 ---
 

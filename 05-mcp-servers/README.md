@@ -38,7 +38,22 @@ The server exposes three types of capabilities:
 
 - [Scenario 01 — Using a Pre-Built MCP Server](./scenario-01-using-a-server.md)
 - [Scenario 02 — Understanding the Protocol](./scenario-02-understanding-the-protocol.md)
-- [Scenario 03 — Building a Minimal MCP Server](./scenario-03-building-a-server.md)
+- [Scenario 03 — Building a Minimal MCP Server](./scenario-03-building-a-server.md) (optional — advanced)
+
+## Further reading
+
+- [MCP Official Documentation](https://modelcontextprotocol.io/introduction) — The canonical reference for the Model Context Protocol specification, including the full list of primitive types (tools, resources, prompts), transport options, and security considerations.
+
+- [MCP GitHub organisation](https://github.com/modelcontextprotocol) — Contains the official SDK implementations (TypeScript, Python) and a curated list of reference servers. Good starting point for both building and finding pre-built servers.
+
+## A note on trust
+
+MCP gives the model real-world access — to databases, APIs, filesystems, external
+services. The harder a tool's action is to reverse, the more carefully you should
+review it before allowing it. A tool that reads data is low risk; a tool that writes,
+deletes, or sends is not. Module 06's reversibility heuristic applies directly here:
+before connecting a new MCP server, ask what each of its tools actually does and
+whether any of those actions are irreversible.
 
 ## Before you move on
 
