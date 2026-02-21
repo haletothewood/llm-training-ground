@@ -304,6 +304,60 @@ Unique answers: ___ / 5
 
 ---
 
+## Module 08 — Eval
+
+### Scenario 01 — Eval a Prompt
+
+**Prompt A average score:** ___ / 8
+
+**Prompt B average score:** ___ / 8
+
+**Delta (B minus A):**
+
+**Which criterion showed the biggest difference?**
+
+
+**How hard was it to score consistently on the rubric?**
+
+
+---
+
+### Scenario 02 — Eval a Skill
+
+**Without rules file average:** ___ / 8
+
+**With rules file average:** ___ / 8
+
+**Delta:**
+
+**Was the baseline surprisingly good? On which criteria?**
+
+
+**Which rules had a visible effect? Which had none?**
+
+
+**What did you change in the revised rules file?**
+
+
+---
+
+### Scenario 03 — Tessl Task Evals (optional)
+
+**Skill evaluated:**
+
+**Number of scenarios tested:**
+
+**Pass rate with skill:** ___ %
+
+**Pass rate without skill:** ___ %
+
+**Number of negative deltas:**
+
+**What changes did you make based on the results?**
+
+
+---
+
 ## Overall patterns
 
 **The technique I'll use most going forward:**

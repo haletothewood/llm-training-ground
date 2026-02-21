@@ -18,6 +18,7 @@ Anyone who wants to move beyond "just chatting" with an AI and start using it as
 | 05 | [MCP Servers](./05-mcp-servers/) | Extending LLMs with external context and capabilities |
 | 06 | [Critical Judgment](./06-critical-judgment/) | When to trust output, when to reset, and when not to use AI |
 | 07 | [Making It Stick](./07-making-it-stick/) | Project rules, automation scripts, and building a personal AI workflow |
+| 08 | [Eval](./08-eval/) | Measuring whether a prompt, skill, or context file actually improves output |
 
 ## Getting started
 
