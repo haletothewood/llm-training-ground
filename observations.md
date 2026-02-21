@@ -255,6 +255,55 @@ Unique answers: ___ / 5
 
 ---
 
+## Module 07 — Making It Stick
+
+### Scenario 01 — Project Rules
+
+**Did the rules file change first-response quality? How?**
+
+
+**What rule was most effective? What rule was ignored?**
+
+
+**Where's the line between useful constraint and micromanagement?**
+
+
+---
+
+### Scenario 02 — Automate One Thing
+
+**How did the automation-prompt quality compare to chat-prompt quality?**
+
+
+**What broke on the first run? What did you change?**
+
+
+**What would you automate next?**
+
+
+---
+
+### Scenario 03 — The Weekly Review
+
+**Tracking table:**
+
+| Date | Task | Form factor | Outcome | Again? |
+|------|------|-------------|---------|--------|
+| | | | | |
+
+**Weekly summary:**
+
+- Most common use case:
+- Hit rate (useful / total):
+- Net-negative tasks:
+- Missed opportunities:
+- Most common form factor:
+
+**Personal rules of engagement:**
+
+
+---
+
 ## Overall patterns
 
 **The technique I'll use most going forward:**
