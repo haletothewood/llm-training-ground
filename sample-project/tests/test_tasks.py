@@ -2,7 +2,6 @@
 Unit tests for tasks.py business logic.
 """
 
-import pytest
 import tasks as task_lib
 
 

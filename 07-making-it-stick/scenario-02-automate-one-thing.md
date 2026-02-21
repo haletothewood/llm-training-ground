@@ -75,14 +75,19 @@ def main():
               file=sys.stderr)
         diff = diff[:MAX_CHARS]
 
-    client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from env
+    try:
+        client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from env
+    except anthropic.AuthenticationError:
+        print("Error: ANTHROPIC_API_KEY is not set or is invalid.", file=sys.stderr)
+        sys.exit(1)
 
-    message = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=1024,
-        messages=[{
-            "role": "user",
-            "content": f"""Summarise this git diff as a pull request description.
+    try:
+        message = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=1024,
+            messages=[{
+                "role": "user",
+                "content": f"""Summarise this git diff as a pull request description.
 
 Format:
 ## Summary
@@ -93,8 +98,12 @@ Format:
 
 Diff:
 {diff}"""
-        }]
-    )
+            }]
+        )
+    except anthropic.APIError as e:
+        print(f"API error: {e}", file=sys.stderr)
+        sys.exit(1)
+
     print(message.content[0].text)
 
 if __name__ == "__main__":

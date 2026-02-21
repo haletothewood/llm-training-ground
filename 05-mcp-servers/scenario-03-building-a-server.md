@@ -99,7 +99,10 @@ server.setRequestHandler(ListToolsRequestSchema, async () => ({
 
 server.setRequestHandler(CallToolRequestSchema, async (request) => {
   if (request.params.name === "add_note") {
-    const content = request.params.arguments?.content as string;
+    const content = String(request.params.arguments?.content ?? "");
+    if (!content) {
+      return { content: [{ type: "text", text: "Error: note content is required." }] };
+    }
     const timestamp = new Date().toISOString().split("T")[0];
     fs.appendFileSync(NOTES_FILE, `[${timestamp}] ${content}\n`);
     return { content: [{ type: "text", text: "Note saved." }] };
