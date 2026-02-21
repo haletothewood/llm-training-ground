@@ -27,9 +27,9 @@ def filter_by_status(tasks, status):
 
 
 def filter_by_priority(tasks, priority):
-    # BUG: uses >= instead of ==, so "high" returns all tasks,
-    # "medium" returns medium + high, "low" returns everything.
-    # The symptom: GET /tasks?priority=high returns too many results.
+    # BUG: uses >= instead of ==, so "low" returns everything,
+    # "medium" returns medium + high, and only "high" works correctly.
+    # The symptom: GET /tasks?priority=medium returns too many results.
     target = PRIORITY_ORDER.get(priority, -1)
     return [t for t in tasks if PRIORITY_ORDER.get(t["priority"], -1) >= target]
 

@@ -45,7 +45,7 @@ def test_filter_by_priority_returns_only_matching():
     ]
     result = task_lib.filter_by_priority(tasks, "high")
     # Should return only the high-priority task.
-    # This test currently fails due to the bug in filter_by_priority.
+    # This test passes even with the bug — "high" happens to work with >=.
     assert len(result) == 1
     assert result[0]["title"] == "C"
 
