@@ -31,6 +31,8 @@ def list_tasks():
 @app.route("/tasks", methods=["POST"])
 def create_task():
     data = request.get_json()
+    if not data:
+        return jsonify({"error": "Request body must be JSON"}), 400
 
     # No validation: missing fields, invalid priority/status values,
     # or empty title are all silently accepted.
@@ -51,6 +53,8 @@ def create_task():
 @app.route("/tasks/<task_id>", methods=["PUT"])
 def update_task(task_id):
     data = request.get_json()
+    if not data:
+        return jsonify({"error": "Request body must be JSON"}), 400
     all_tasks = storage.load_tasks()
 
     task = task_lib.get_task_by_id(all_tasks, task_id)

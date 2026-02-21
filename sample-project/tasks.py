@@ -3,7 +3,7 @@ Business logic for task management.
 """
 
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 
 PRIORITY_ORDER = {"low": 0, "medium": 1, "high": 2}
 
@@ -18,7 +18,7 @@ def create_task(title, description="", priority="medium", status="open"):
         "description": description,
         "priority": priority,
         "status": status,
-        "created_at": datetime.utcnow().isoformat(),
+        "created_at": datetime.now(timezone.utc).isoformat(),
     }
 
 

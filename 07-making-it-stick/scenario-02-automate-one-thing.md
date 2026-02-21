@@ -69,6 +69,12 @@ def main():
         print("No diff provided. Usage: git diff | python pr_summary.py")
         sys.exit(1)
 
+    MAX_CHARS = 100_000  # ~25k tokens; avoids hitting API context limits
+    if len(diff) > MAX_CHARS:
+        print(f"Warning: diff is {len(diff):,} chars — truncating to {MAX_CHARS:,}",
+              file=sys.stderr)
+        diff = diff[:MAX_CHARS]
+
     client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from env
 
     message = client.messages.create(
