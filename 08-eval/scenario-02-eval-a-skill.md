@@ -172,3 +172,7 @@ Did the revision improve the score? Did removing redundant rules hurt anything?
 This is the eval loop applied to infrastructure: change → measure → iterate. The same
 loop you'd use to improve a prompt, but applied to the thing that shapes every prompt
 in the project.
+
+**Want automated feedback?** Fork this repo, add your `ANTHROPIC_API_KEY` as a
+repository secret, push your `sample-project/CLAUDE.md`, and open a PR. The eval
+Action will run the with/without comparison and post the results.

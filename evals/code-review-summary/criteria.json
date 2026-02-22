@@ -1,0 +1,42 @@
+{
+  "task_name": "Code Review Summary",
+  "trials": 3,
+  "criteria": [
+    {
+      "name": "accuracy",
+      "description": "Does the summary correctly identify what changed and why?",
+      "scores": {
+        "0": "Misidentifies what changed or why",
+        "1": "Identifies the change but misses the root cause",
+        "2": "Correctly identifies what changed, why it was wrong, and what the fix does"
+      }
+    },
+    {
+      "name": "actionability",
+      "description": "Does the summary give a reviewer something specific to act on?",
+      "scores": {
+        "0": "No useful information for a reviewer",
+        "1": "Mentions what to look for but vaguely",
+        "2": "Specific risks, edge cases, or test suggestions a reviewer could act on"
+      }
+    },
+    {
+      "name": "conciseness",
+      "description": "Is every sentence useful?",
+      "scores": {
+        "0": "Rambling, padded, or includes irrelevant detail",
+        "1": "Mostly focused but some filler",
+        "2": "Every sentence adds information, no padding"
+      }
+    },
+    {
+      "name": "risk_awareness",
+      "description": "Does the summary identify specific risks or edge cases?",
+      "scores": {
+        "0": "No mention of risks or edge cases",
+        "1": "Mentions risks in general terms",
+        "2": "Identifies specific risks (e.g., invalid priority values, missing keys)"
+      }
+    }
+  ]
+}

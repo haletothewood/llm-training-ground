@@ -1,0 +1,42 @@
+{
+  "task_name": "Write a Test",
+  "trials": 3,
+  "criteria": [
+    {
+      "name": "uses_pytest",
+      "description": "Does the test use pytest properly?",
+      "scores": {
+        "0": "Uses unittest or no testing framework",
+        "1": "Uses pytest but with unittest patterns (e.g., self.assert*, TestCase subclass)",
+        "2": "Clean pytest with assertions, fixtures if appropriate"
+      }
+    },
+    {
+      "name": "file_location",
+      "description": "Is the test in the correct file location?",
+      "scores": {
+        "0": "Test in wrong directory or unnamed sensibly",
+        "1": "Reasonable location but doesn't match convention",
+        "2": "In tests/test_tasks.py matching the convention"
+      }
+    },
+    {
+      "name": "naming_convention",
+      "description": "Do the test functions follow a clear naming pattern?",
+      "scores": {
+        "0": "No clear naming pattern",
+        "1": "Descriptive but inconsistent with project style",
+        "2": "Follows test_<function>_<scenario> pattern"
+      }
+    },
+    {
+      "name": "test_quality",
+      "description": "Do the tests verify meaningful behaviour?",
+      "scores": {
+        "0": "Tests don't verify meaningful behaviour",
+        "1": "Tests verify basic behaviour only",
+        "2": "Tests cover normal case and at least one edge case"
+      }
+    }
+  ]
+}

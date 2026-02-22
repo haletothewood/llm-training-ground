@@ -1,0 +1,24 @@
+name: Eval Rules File
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths: ['sample-project/CLAUDE.md']
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install anthropic
+      - name: Run eval
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scoring/eval_rules.py --trials 3 --output comment.md
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: eval-scorecard
+          path: comment.md
