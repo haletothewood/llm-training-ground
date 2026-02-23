@@ -126,9 +126,6 @@ If your tool has a non-interactive mode, use it to avoid manual session manageme
 # Claude Code
 claude -p "your prompt here"
 
-# OpenAI
-echo "your prompt here" | openai api chat.completions.create -m gpt-4o
-
 # Or any CLI wrapper you prefer
 ```
 
@@ -136,30 +133,20 @@ Run it multiple times — each invocation is a fresh session with no memory of p
 
 ### Option 3 — Python script for repeatable runs
 
-For full automation, create `eval_prompt.py`. This example uses the OpenAI-compatible
-API format that works with most providers (OpenAI, Anthropic, local models via Ollama,
-etc.). You'll need an API key set in your environment (e.g., `OPENAI_API_KEY`):
+For full automation, create `eval_prompt.py`. You'll need your `ANTHROPIC_API_KEY`
+set in your environment:
 
 ```python
 """
 Run a prompt multiple times and print each result for manual scoring.
-Requires: pip install openai
+Requires: pip install anthropic
 """
 
 import sys
-from openai import OpenAI
+import anthropic
 
-# --- Configuration ---
-# Adapt these to your provider:
-#
-# OpenAI:      base_url=None (default),    model="gpt-4o"
-# Anthropic:   base_url=None (default),    model="claude-sonnet-4-20250514"
-#              (requires: pip install anthropic; use anthropic.Anthropic() instead)
-# Ollama:      base_url="http://localhost:11434/v1", model="llama3"
-# Together:    base_url="https://api.together.xyz/v1",  model="meta-llama/..."
-
-client = OpenAI()       # reads OPENAI_API_KEY from environment
-MODEL = "gpt-4o"        # change to match your provider
+client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY from environment
+MODEL = "claude-sonnet-4-20250514"
 
 DIFF = """
 --- a/sample-project/tasks.py
@@ -193,13 +180,13 @@ def run_trials(prompt, label, n=3):
     print(f"  {label} — {n} trials")
     print(f"{'='*60}")
     for i in range(n):
-        response = client.chat.completions.create(
+        message = client.messages.create(
             model=MODEL,
             max_tokens=512,
             messages=[{"role": "user", "content": prompt}],
         )
         print(f"\n--- Trial {i+1} ---")
-        print(response.choices[0].message.content)
+        print(message.content[0].text)
         print()
 
 if __name__ == "__main__":

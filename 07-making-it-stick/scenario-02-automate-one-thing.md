@@ -159,7 +159,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)
 ```
 
-Different SDK, same pattern. The fact that the prompt is portable across providers is
+Different SDK, same pattern. The fact that prompts are portable across providers is
 one of the key advantages of learning prompting well — it's not vendor-specific.
 
 ### No API key at all?
