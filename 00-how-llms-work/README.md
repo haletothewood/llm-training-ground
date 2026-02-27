@@ -103,3 +103,6 @@ from visual/accessible to technical.
 - [Google Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) — Google's free ML fundamentals course. Useful background if you want the statistical learning context that LLMs sit on top of.
 
 - [Anthropic Research](https://www.anthropic.com/research) — Anthropic's published research, including their mechanistic interpretability work ("what is the model actually doing internally?") and alignment research. More technical, but directly relevant to understanding why LLMs behave as they do.
+
+---
+*Last verified: February 2025 · Claude Sonnet 4*

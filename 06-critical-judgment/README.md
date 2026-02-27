@@ -6,6 +6,8 @@
 - Apply the reversibility heuristic to decide how carefully to review any given AI output
 - Use the "prove it" and "show your sources" prompts to expose model confabulation
 - Categorise a task as high-trust or low-trust before delegating it to AI
+- Recognise prompt injection attacks and design systems that reduce their impact
+- Classify data by sensitivity and decide what is and isn't safe to include in prompts
 
 ---
 
@@ -45,9 +47,11 @@ straight in is high-risk. The reversibility heuristic lets you calibrate trust t
 
 ## Scenarios in this module
 
-- [Scenario 01 — When to Reset](./scenario-01-context-management.md)
-- [Scenario 02 — Trust but Verify](./scenario-02-validate-and-verify.md)
-- [Scenario 03 — Knowing When to Use AI](./scenario-03-judgment-calls.md)
+- [Scenario 01 — When to Reset](./Scenario-01-Context-Management.md)
+- [Scenario 02 — Trust but Verify](./Scenario-02-Validate-and-Verify.md)
+- [Scenario 03 — Knowing When to Use AI](./Scenario-03-Judgment-Calls.md)
+- [Scenario 04 — Security and Adversarial Inputs](./Scenario-04-Security-and-Adversarial-Inputs.md)
+- [Scenario 05 — Data and Compliance](./Scenario-05-Data-and-Compliance.md)
 
 ## Before you move on
 
@@ -57,3 +61,6 @@ before you start any AI-assisted task:
 1. Is this context fresh enough to trust?
 2. Will I be able to verify the output independently?
 3. What's the cost if the output is wrong, and have I set up enough friction to catch it?
+
+---
+*Last verified: February 2025 · Claude Sonnet 4*

@@ -52,3 +52,6 @@ A week of structured observation reveals more than a single retrospective.
 You're done when you have at least one project rule file committed to a repo, one
 automated script you've actually used, and one week of usage observations you can look
 back on.
+
+---
+*Last verified: February 2025 · Claude Sonnet 4*

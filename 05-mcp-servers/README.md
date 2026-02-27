@@ -67,3 +67,6 @@ whether any of those actions are irreversible.
 
 After this module you should understand: what MCP solves, how to connect a pre-built
 server to your LLM client, and have a mental model of how to build your own.
+
+---
+*Last verified: February 2025 · Claude Sonnet 4*

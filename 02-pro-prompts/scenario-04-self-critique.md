@@ -1,5 +1,7 @@
 # Scenario 04 — Self-Critique and Reflection
 
+**Requires:** any chat interface
+
 ## Goal
 Use a multi-step conversation to get the model to evaluate and improve its own output.
 
@@ -37,7 +39,7 @@ Copy the output (use Ctrl+Shift+V to paste so the model doesn't use the file as 
 ```
 Here is a paragraph I'm going to send to an engineering manager:
 
-[PASTE OUTPUT HERE - use Ctrl+Shift+V to paste]
+[PASTE OUTPUT HERE]
 
 Act as a critical editor. What are the weaknesses of this paragraph? Is it too jargon-heavy?
 Does it actually address what the manager cares about? Is the value proposition clear?

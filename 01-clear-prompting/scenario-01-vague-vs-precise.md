@@ -1,5 +1,7 @@
 # Scenario 01 — Vague vs Precise
 
+**Requires:** any chat interface
+
 ## Goal
 Experience the difference between a vague and a precise prompt producing very different outputs from the same model.
 
@@ -20,7 +22,7 @@ Take note of: How many assumptions did the model make? Did it ask you clarifying
 Now paste this (use Ctrl+Shift+V to paste so the model doesn't use the file as context):
 
 ```
-In src/auth/token.ts, the function validateToken(token: string) currently throws
+In src/auth/token.ts (this is a hypothetical example, not a file in this repo), the function validateToken(token: string) currently throws
 a TokenExpiredError (from the jsonwebtoken library) when the token has expired.
 
 The expected behaviour is: return false when the token is expired, rather than
@@ -51,6 +53,8 @@ Compare the two outputs.
 Take the vague prompt from Part A and rewrite it yourself — without looking at Part B — to describe a real bug you've encountered or could imagine encountering. Include: file/function location, observed behaviour, expected behaviour, and any constraints. Run it and see if you get a usable fix in one shot.
 
 ---
+
+**Non-technical alternative:** If you don't work with code, try the same exercise with a writing task: compare "write me something about our product" vs "write a 3-sentence summary of [specific product] for [specific audience] highlighting [specific benefit]."
 
 ## Hints
 

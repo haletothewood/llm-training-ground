@@ -1,5 +1,7 @@
 # Scenario 03 — Format Control
 
+**Requires:** any chat interface
+
 ## Goal
 Use explicit format instructions to get output that's ready to use without reformatting.
 

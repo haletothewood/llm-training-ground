@@ -1,5 +1,7 @@
 # Scenario 02 — Understanding the Protocol
 
+**Requires:** Claude Code, Cursor, or similar AI coding tool
+
 ## Goal
 Understand how MCP works under the hood, so you can debug problems and design your
 own servers effectively.

@@ -1,5 +1,7 @@
 # Scenario 01 — Asking the Model to Use a Tool
 
+**Requires:** Claude Code, Cursor, or similar AI coding tool
+
 ## Goal
 Understand how tool use changes the nature of what you ask for — and what you get back.
 

@@ -301,6 +301,10 @@ Unique answers: ___ / 5
 
 **Personal rules of engagement:**
 
+*Starter prompts — answer these after your week of tracking:*
+- What's one class of task I'll now use AI for that I wasn't before?
+- What's one situation where I'll require human review before acting on AI output?
+- What's my rule for when to start a fresh conversation rather than continuing an existing one?
 
 ---
 

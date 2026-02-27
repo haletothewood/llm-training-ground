@@ -1,5 +1,7 @@
 # Scenario 01 — Few-Shot Prompting
 
+**Requires:** any chat interface
+
 ## Goal
 Use examples to teach the model a format or style it couldn't easily infer from a description alone.
 
@@ -68,6 +70,8 @@ Commit: "Update readme with installation steps"
 Think of a classification or tagging task you do repeatedly in your workflow — PR labels,
 issue triage, log severity, API response codes. Write a few-shot prompt with 3 examples.
 Run it on 5 real inputs and check consistency.
+
+**Non-technical alternative:** Classify customer feedback into categories (praise, bug report, feature request, complaint) using few-shot examples — show 2–3 examples of each category before asking the model to classify new feedback.
 
 ## When to use few-shot
 

@@ -1,5 +1,7 @@
 # Scenario 01 — Memory and Context
 
+**Requires:** any chat interface
+
 > **Optional.** This scenario is for developers who want to observe the no-memory and
 > context-window properties directly, rather than just taking them on faith.
 
@@ -42,8 +44,8 @@ this in one message (use Ctrl+Shift+V):
 I need help with our authentication system. The token expiry logic lives in
 src/auth/token.ts. Keep this in mind — I'll ask about it later.
 
-[Now paste a long block of irrelevant content here — a few pages from Wikipedia,
-a long README, or any large block of text that's unrelated to authentication.
+[Now paste at least 3,000 words of unrelated content — for example, copy the first
+three sections of the Wikipedia article on "History of computing hardware".
 The goal is to push the earlier message further back in the context.]
 
 OK, back to my earlier question. Which file contains the token expiry logic?

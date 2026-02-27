@@ -1,5 +1,7 @@
 # Scenario 03 — Knowing When to Use AI
 
+**Requires:** any chat interface
+
 ## Goal
 Develop a reliable framework for deciding when AI is genuinely useful, when it's
 a liability, and when you're better off just reading the docs.

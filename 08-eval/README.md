@@ -71,3 +71,6 @@ with quantitative measurement instead of qualitative reflection.
 
 You're done when you can answer "does this change make the output better?" with
 evidence instead of intuition.
+
+---
+*Last verified: February 2025 · Claude Sonnet 4*

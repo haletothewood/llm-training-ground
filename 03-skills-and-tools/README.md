@@ -67,3 +67,6 @@ the primary filter for deciding how much autonomy to grant at each step.
 
 You're ready for module 04 when you can describe a task in terms of "what the model needs
 to do" rather than "what answer you want it to give".
+
+---
+*Last verified: February 2025 · Claude Sonnet 4*

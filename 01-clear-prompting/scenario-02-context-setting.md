@@ -1,5 +1,7 @@
 # Scenario 02 — Context Setting
 
+**Requires:** any chat interface
+
 ## Goal
 Learn how supplying background context dramatically changes the quality and relevance of a response.
 

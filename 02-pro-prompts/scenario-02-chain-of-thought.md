@@ -1,5 +1,7 @@
 # Scenario 02 — Chain of Thought
 
+**Requires:** any chat interface
+
 ## Goal
 Use step-by-step reasoning prompts to improve accuracy on tasks that require logic or inference.
 
@@ -55,6 +57,8 @@ Think step by step, then give your final answer.
 - Which version would you trust more if you couldn't verify the answer yourself?
 
 ---
+
+**Non-technical alternative:** Use chain-of-thought for a planning problem — "We have a budget of £10,000 for a team offsite. Think step by step about venue, travel, activities, and meals."
 
 ## When to use chain of thought
 

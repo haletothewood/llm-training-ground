@@ -1,5 +1,7 @@
 # Scenario 02 — Eval a Skill
 
+**Requires:** Claude Code, Cursor, or similar AI coding tool
+
 ## Goal
 Measure whether a project rules file actually improves output, or whether the model
 already handles the task well without it.

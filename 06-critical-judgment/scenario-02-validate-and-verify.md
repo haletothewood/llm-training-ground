@@ -1,5 +1,7 @@
 # Scenario 02 — Trust but Verify
 
+**Requires:** any chat interface
+
 ## Goal
 Build reliable habits for treating AI output as a hypothesis rather than a fact — and
 learn the prompting patterns that make verification easier.

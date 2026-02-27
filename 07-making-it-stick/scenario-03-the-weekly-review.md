@@ -1,5 +1,7 @@
 # Scenario 03 — The Weekly Review
 
+**Requires:** any chat interface
+
 ## Goal
 Track your AI usage for one week and discover your actual patterns.
 

@@ -20,6 +20,10 @@ Anyone who wants to move beyond "just chatting" with an AI and start using it as
 | 07 | [Making It Stick](./07-making-it-stick/) | Project rules, automation scripts, and building a personal AI workflow |
 | 08 | [Eval](./08-eval/) | Measuring whether a prompt, skill, or context file actually improves output |
 
+### Not a developer?
+
+Modules 00–02 and 06 are designed for any audience. Modules 03–05 and 07–08 require coding tools — read the concepts but skip the hands-on exercises if you don't have a development environment.
+
 ## Getting started
 
 **First:** read [SETUP.md](./SETUP.md) — it covers which tools you need, how to install

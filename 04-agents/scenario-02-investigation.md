@@ -1,5 +1,7 @@
 # Scenario 02 — Multi-Step Investigation
 
+**Requires:** Claude Code, Cursor, or similar AI coding tool
+
 ## Goal
 Use an agent to investigate an unknown problem — where you don't know what files to look
 at or what the root cause is before you start.

@@ -62,6 +62,21 @@ is wrong in a way that isn't immediately obvious.
 - For any change touching business logic: ask yourself "does this handle the failure case?"
   and check that the agent addressed it
 
+## Context window overflow mid-task
+
+Agents can run out of context mid-task without an obvious error. Watch for these signs:
+
+- The agent starts repeating steps it already completed
+- It contradicts earlier findings or forgets constraints you gave it
+- Its summaries become vague or omit details it previously mentioned
+- It asks questions about information it already gathered
+
+**How to prevent it:**
+- Break large tasks into smaller, independently scoped subtasks
+- After a long phase, ask: "Summarise your findings so far" — save that summary and
+  start a fresh session with it as the new context
+- Avoid very long exploratory sessions; reset once the investigation phase is complete
+
 ## The golden rule
 
 An agent is as good as the goal you give it. Vague goal → unpredictable path.

@@ -1,5 +1,7 @@
 # Scenario 01 — Project Rules
 
+**Requires:** Claude Code, Cursor, or similar AI coding tool
+
 ## Goal
 Write a rules file for a real project that makes the AI follow your standards without
 being reminded.

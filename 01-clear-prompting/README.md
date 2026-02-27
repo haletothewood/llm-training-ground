@@ -42,3 +42,6 @@ verification habits, especially for any output you plan to act on directly.
 ## Before you move on
 
 You're ready for module 02 when you can look at a prompt you wrote and identify: what context is missing, what the expected output format is, and whether it's asking for one thing or many.
+
+---
+*Last verified: February 2025 · Claude Sonnet 4*

@@ -61,3 +61,6 @@ an agent with file and action access — not just a chat responder. The promptin
 from Modules 01 and 02 transfer directly, but the stakes change. A poorly scoped prompt
 in a chat session produces a bad text response. A poorly scoped prompt to an agent can
 modify files, call APIs, or take actions that are hard to reverse.
+
+---
+*Last verified: February 2025 · Claude Sonnet 4*

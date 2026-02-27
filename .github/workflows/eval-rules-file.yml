@@ -13,12 +13,20 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install anthropic
+          cache: 'pip'
+          cache-dependency-path: scoring/requirements.txt
+      - run: pip install -r scoring/requirements.txt
       - name: Run eval
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scoring/eval_rules.py --trials 3 --output comment.md
       - uses: marocchino/sticky-pull-request-comment@v2
+        if: success()
         with:
           header: eval-scorecard
           path: comment.md
+      - uses: marocchino/sticky-pull-request-comment@v2
+        if: failure()
+        with:
+          header: eval-scorecard
+          message: '> **Eval failed** — see workflow logs for details.'

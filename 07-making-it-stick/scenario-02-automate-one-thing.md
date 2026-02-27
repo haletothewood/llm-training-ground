@@ -1,5 +1,7 @@
 # Scenario 02 — Automate One Thing
 
+**Requires:** terminal + Python environment
+
 ## Goal
 Write a short script that calls an LLM API to automate a task you currently do manually.
 

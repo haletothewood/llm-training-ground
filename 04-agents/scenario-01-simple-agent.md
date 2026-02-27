@@ -1,5 +1,7 @@
 # Scenario 01 — Simple Agent Task
 
+**Requires:** Claude Code, Cursor, or similar AI coding tool
+
 ## Goal
 Give an agent a bounded, multi-step task and observe how it plans and executes.
 

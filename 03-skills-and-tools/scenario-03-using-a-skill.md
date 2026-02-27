@@ -1,5 +1,7 @@
 # Scenario 03 — Using a Skill (Claude Code)
 
+**Requires:** Claude Code, Cursor, or similar AI coding tool
+
 > **Claude Code-specific.** This scenario uses Claude Code's `/command` skill system.
 > See the [Module 03 README](./README.md#what-are-skills) for the equivalent in Cursor
 > (Rules) and GitHub Copilot (Custom Instructions).
@@ -56,10 +58,12 @@ Does the skill incorporate your additional context?
 
 ## Creating a custom skill
 
-Skills live in `~/.claude/skills/` (or a project-level `.claude/skills/` directory).
+Skills live in `~/.claude/commands/` (or a project-level `.claude/commands/` directory).
+Note: older versions of Claude Code used `~/.claude/skills/` — update to `commands/` if
+you're on a recent release.
 A skill is just a markdown file with a prompt template.
 
-Create a file at `~/.claude/skills/summarise-pr.md`:
+Create a file at `~/.claude/commands/summarise-pr.md`:
 
 ```markdown
 # Summarise PR

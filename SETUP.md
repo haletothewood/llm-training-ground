@@ -4,6 +4,12 @@ Before starting the exercises, spend five minutes confirming you have what you n
 
 ---
 
+### New to the terminal?
+
+A terminal is a text-based interface (command-line interface (CLI) — a text-only program you run in a terminal) for running commands on your computer. On macOS, open Terminal from Applications > Utilities. On Windows, use PowerShell. If you've never used one before, [this beginner guide](https://www.freecodecamp.org/news/command-line-for-beginners/) covers the basics in about 10 minutes.
+
+---
+
 ## 1. Pick your AI coding tool
 
 The scenarios work with any of these. Pick whichever you already have or are most
@@ -63,6 +69,12 @@ python app.py
 
 The server starts at `http://localhost:5000`. You don't need to run it to use it as
 a target for the agent exercises — the agent can read and modify the files directly.
+
+To run the tests:
+
+```bash
+cd sample-project && pytest tests/ -v
+```
 
 ---
 

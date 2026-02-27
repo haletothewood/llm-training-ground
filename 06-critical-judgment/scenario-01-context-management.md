@@ -1,5 +1,7 @@
 # Scenario 01 — When to Reset
 
+**Requires:** any chat interface
+
 ## Goal
 Recognise the signals that a conversation context has degraded, and practise the habits
 that prevent you from building on corrupted output.

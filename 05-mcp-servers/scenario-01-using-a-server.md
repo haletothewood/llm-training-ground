@@ -1,5 +1,7 @@
 # Scenario 01 — Using a Pre-Built MCP Server
 
+**Requires:** Claude Code, Cursor, or similar AI coding tool
+
 ## Goal
 Connect a pre-built MCP server to Claude Code (or your client of choice) and use it to
 extend what the model can do.
@@ -38,7 +40,7 @@ The config format is the same across clients; only the file path differs.
 }
 ```
 
-Replace the path with a real directory you want the model to access.
+Replace the path with a real directory you want the model to access. On Windows, use `C:\\Users\\YOUR_USERNAME\\Documents` instead.
 
 ### Claude Code
 

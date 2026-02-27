@@ -1,5 +1,7 @@
 # Scenario 03 — Building a Minimal MCP Server
 
+**Requires:** terminal + Python environment
+
 > **Optional — advanced.** This scenario is for developers who want to understand MCP at
 > the protocol level or plan to build custom integrations. Scenarios 01 and 02 are
 > sufficient for using MCP servers productively.

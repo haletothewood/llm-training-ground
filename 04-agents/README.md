@@ -66,3 +66,6 @@ in the agentic context. See also the "Detecting silent failures" section in
 You're ready for module 05 when you understand the difference between "prompt the model"
 and "give the agent a goal" — and when you're comfortable letting the model take multiple
 steps autonomously in a bounded scope.
+
+---
+*Last verified: February 2025 · Claude Sonnet 4*

@@ -1,5 +1,7 @@
 # Scenario 03 — Role Prompting
 
+**Requires:** any chat interface
+
 ## Goal
 Use persona assignment to shape the model's expertise, tone, and perspective.
 

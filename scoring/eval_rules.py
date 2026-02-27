@@ -13,6 +13,7 @@ import argparse
 import json
 import os
 import sys
+import time
 from pathlib import Path
 
 import anthropic
@@ -62,7 +63,21 @@ def run_task(client, model, user_prompt, system_prompt, n):
         kwargs = {"model": model, "max_tokens": 1024, "messages": messages}
         if system_prompt:
             kwargs["system"] = system_prompt
-        response = client.messages.create(**kwargs)
+        for attempt in range(2):
+            try:
+                response = client.messages.create(**kwargs)
+                break
+            except anthropic.APIError as e:
+                if attempt == 0:
+                    print(f"Warning: API error on attempt 1, retrying: {e}",
+                          file=sys.stderr)
+                    time.sleep(1)
+                else:
+                    print(f"Warning: API error on attempt 2, skipping trial: {e}",
+                          file=sys.stderr)
+                    response = None
+        if response is None:
+            continue
         text = "".join(
             block.text for block in response.content if block.type == "text"
         )
@@ -98,12 +113,28 @@ Example response format:
 
 {output}"""
 
-    response = client.messages.create(
-        model=model,
-        max_tokens=256,
-        temperature=0,
-        messages=[{"role": "user", "content": judge_prompt}],
-    )
+    response = None
+    for attempt in range(2):
+        try:
+            response = client.messages.create(
+                model=model,
+                max_tokens=256,
+                temperature=0,
+                messages=[{"role": "user", "content": judge_prompt}],
+            )
+            break
+        except anthropic.APIError as e:
+            if attempt == 0:
+                print(f"Warning: API error on attempt 1 (scoring), retrying: {e}",
+                      file=sys.stderr)
+                time.sleep(1)
+            else:
+                print(f"Warning: API error on attempt 2 (scoring), returning zeros: {e}",
+                      file=sys.stderr)
+
+    if response is None:
+        return {name: 0 for name in criterion_names}
+
     text = "".join(
         block.text for block in response.content if block.type == "text"
     )
@@ -112,7 +143,11 @@ Example response format:
     if text.startswith("```"):
         text = text.split("\n", 1)[1]  # remove opening ```json
         text = text.rsplit("```", 1)[0]  # remove closing ```
-    return json.loads(text.strip())
+    try:
+        return json.loads(text.strip())
+    except json.JSONDecodeError as e:
+        print(f"Warning: failed to parse judge response as JSON: {e}", file=sys.stderr)
+        return {name: 0 for name in criterion_names}
 
 
 def run_eval(evals_dir, rules_file, trials, model):
@@ -157,15 +192,15 @@ def run_eval(evals_dir, rules_file, trials, model):
                 scores = score_output(client, model, output, task["criteria"])
                 with_scores.append(scores)
 
+        max_per_criterion = {
+            c["name"]: max(int(k) for k in c["scores"])
+            for c in task["criteria"]["criteria"]
+        }
         results.append({
             "task_name": task["name"],
             "criterion_names": criterion_names,
             "trials": task_trials,
-            "max_per_criterion": max(
-                int(k)
-                for c in task["criteria"]["criteria"]
-                for k in c["scores"]
-            ),
+            "max_per_criterion": max_per_criterion,
             "without_outputs": without_outputs,
             "without_scores": without_scores,
             "with_outputs": with_outputs,
@@ -194,9 +229,9 @@ def format_comment(results, has_rules):
 
     for i, r in enumerate(results, 1):
         names = r["criterion_names"]
-        max_score = r["max_per_criterion"]
+        max_per_criterion = r["max_per_criterion"]
         trials = r["trials"]
-        max_total = max_score * len(names)
+        max_total = sum(max_per_criterion[name] for name in names)
 
         without_avg = avg_scores(r["without_scores"], names)
 

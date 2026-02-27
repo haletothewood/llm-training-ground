@@ -1,5 +1,7 @@
 # Scenario 02 — Combining Tools in One Task
 
+**Requires:** Claude Code, Cursor, or similar AI coding tool
+
 ## Goal
 Prompt the model to use multiple tools in sequence to complete a task that no single tool
 could handle alone.

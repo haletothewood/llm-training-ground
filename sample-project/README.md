@@ -52,6 +52,17 @@ curl -X POST http://localhost:5000/tasks \
   -d '{"title": "Write tests", "priority": "high", "status": "open"}'
 ```
 
+## Teaching targets
+
+The following issues are **intentional** — placed here to give exercises something real to work with:
+
+- `filter_by_priority` in `tasks.py` uses `>=` instead of `==` — used in Module 04 Scenario 02
+- Missing input validation in `app.py` endpoints — used in Module 04 Scenario 03
+- `VALID_STATUSES` and `VALID_PRIORITIES` constants in `tasks.py` are provided for learners to use when adding validation
+- One failing test in `tests/test_tasks.py` that proves the priority bug exists
+
+**Security note:** `debug=True` in `app.py` enables Flask's Werkzeug debugger, which allows arbitrary code execution via the browser. Never use `debug=True` in production.
+
 ## Notes for module exercises
 
 - **Module 03** — ask the model to read `requirements.txt` and list dependencies

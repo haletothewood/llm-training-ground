@@ -1,5 +1,7 @@
 # Scenario 03 — Agentic Code Change
 
+**Requires:** Claude Code, Cursor, or similar AI coding tool
+
 ## Goal
 Give an agent a code modification task and practice supervising it effectively.
 

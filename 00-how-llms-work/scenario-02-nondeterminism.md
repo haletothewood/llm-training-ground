@@ -1,5 +1,7 @@
 # Scenario 02 — Non-Determinism
 
+**Requires:** any chat interface
+
 > **Optional.** This scenario is for developers who want to see output variance first-hand,
 > which is a prerequisite for understanding why consistency techniques matter.
 

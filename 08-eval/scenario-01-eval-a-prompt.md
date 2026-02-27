@@ -1,5 +1,7 @@
 # Scenario 01 — Eval a Prompt
 
+**Requires:** any chat interface
+
 ## Goal
 Measure whether a refined prompt produces better output than a simple one, using a
 rubric and multiple trials.

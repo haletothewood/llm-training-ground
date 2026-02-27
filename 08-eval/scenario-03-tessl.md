@@ -1,5 +1,7 @@
 # Scenario 03 — Tessl Task Evals
 
+**Requires:** terminal + Python environment
+
 > **Optional — advanced.** This scenario is for developers who want to automate the
 > eval process from Scenarios 01–02 using tooling. Scenarios 01 and 02 are sufficient
 > for understanding and applying evals. If you don't have Tessl, Parts A and D still
